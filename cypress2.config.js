@@ -21,14 +21,17 @@ module.exports = defineConfig({
   }
 }*/
 
-const { defineConfig } = require('cypress');
+const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  reporter: 'cypress-mochawesome-reporter',
   e2e: {
-    pageLoadTimeout: 90000,
     setupNodeEvents(on, config) {
-      require('cypress-mochawesome-reporter/plugin')(on);
+      // implement node event listeners here
     },
+    baseUrl: 'https://redsys-stage.sandsmedia.com/',
+    defaultCommandTimeout: 10000,  // 10 seconds wait for commands
+    pageLoadTimeout: 30000,        // 30 seconds wait for page loads
+    requestTimeout: 10000,         // 10 seconds wait for requests
+    responseTimeout: 30000,        // 30 seconds wait for responses
   },
 });

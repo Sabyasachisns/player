@@ -57,7 +57,6 @@ describe('Login to the Kiosk page', () => {
       cy.get('#devopscon-berlin-2025__action--close').click();
 
       
-
       cy.get('span.text-nowrap.font-weight-bolder').contains('Live Chat').click();
       cy.screenshot('live-chat-page', { capture: 'fullPage' });
 
