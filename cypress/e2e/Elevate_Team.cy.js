@@ -60,7 +60,7 @@ describe('Login to the Kiosk page', () => {
               }
           });
 
-          // Step 6: Fill in team details and submit the form
+          // Step 6: Fill in team details and submit the forms
           cy.get('#data_input_team_name').click().type(team_name);
           cy.get('#data_input_teambudget').click().type(credit);
           cy.get('#data_input_costcenter').click().type(cost_center);
