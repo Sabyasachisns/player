@@ -35,7 +35,7 @@ describe('Login to the Kiosk page', () => {
         // Optionally, add waits or assertions here
       
   // Optionally, add assertions or waits here if needed
-  // cy.wait(500); // Uncomment if you want to wait between clicks
+   cy.wait(500); // Uncomment if you want to wait between clicks
 });
          // Step 5: Click on Speaker using the specific class
       cy.get('span.bb-top-navi-text').contains('Speaker').click();
